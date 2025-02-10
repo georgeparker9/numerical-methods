@@ -10,7 +10,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Import required file,
+Import file when needed
 
 ```
 python import root_finding.py
