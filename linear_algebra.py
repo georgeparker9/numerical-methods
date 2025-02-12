@@ -35,7 +35,7 @@ def gaussian_elimination(A: list[list[float]]) -> list[list[float]]:
         The reduced row echelon form of A.
     """
     M = np.array(A, dtype=float)
-    assert M.ndim == 2, "input is not a 2D matrix."
+    assert M.ndim == 1 or M.ndim == 2, "input is not a matrix."
 
     pivot = 0
     n, m = M.shape
@@ -93,3 +93,4 @@ def kernel_basis(A: list[list[float]]) -> np.ndarray:
         basis.append(basis_member)
 
     return np.array(basis)
+
