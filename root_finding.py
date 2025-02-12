@@ -94,3 +94,14 @@ def newton_raphson(
 
     g = lambda x: x - (f(x) / central_difference(f, x, h))
     return fixed_point_iteration(g, x_0, epsilon, N_max)
+
+
+if __name__ == "__main__":
+    print("Results of binary_search(lambda x: x**3-2*x+1,-10,10,1e-5):")
+    print(binary_search(lambda x: x**3-2*x+1,-10,10,1e-5))
+
+    print("Results of fixed_point_iteration(lambda x: (x**2)/3+2/3,1,1e-5,100):")
+    print(fixed_point_iteration(lambda x: (x**2)/3 + 2/3,1,1e-5,100))
+
+    print("Results of newton_raphson(lambda x: -x**3+5*x**2-10*x+5,2,1e-5,100):")
+    print(newton_raphson(lambda x: -x**3+5*x**2-10*x+5,2,1e-5,100))
