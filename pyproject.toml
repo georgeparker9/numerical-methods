@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "numerical-methods"
+version = "0.1.0"
+description = "Various numerical methods in root finding, differential equations, and linear algebra."
+authors = ["George Parker <georgeparker939@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-coverage = "^0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
