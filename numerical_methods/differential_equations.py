@@ -38,8 +38,6 @@ def euler_method(
         y += h * f(x, y)
         x += h
         sol[x] = np.copy(y)
-        print(sol)
-
     return sol
 
 
@@ -110,13 +108,3 @@ def runge_kutta(
         sol[x] = np.copy(y)
 
     return sol
-
-f = lambda x, y: np.array([y[1], -y[0]])
-x_0, y_0, h, n = 0, np.array([0, 1]), 0.01, 100
-sol = runge_kutta(f, x_0, y_0, h, n)
-
-# Exact solution: y = [sin(x), cos(x)]
-for x, y in sol.items():
-    expected_y = np.array([np.sin(x), np.cos(x)])
-    # assert np.allclose(y, expected_y, atol=2e-2)
-    print(x,y,expected_y)
